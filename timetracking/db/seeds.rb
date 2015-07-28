@@ -14,3 +14,15 @@ Project.create name: 'Ironhack 34', description: 'This is a silly cloud'
 25.times do |x|
   Project.create name: "Ironhack #{x}", description: "This is a silly #{x} cloud"
 end
+
+projects = Project.all
+projects.each do |p|
+  p.entries.create(hours: rand(24), minutes: rand(60))
+  p.entries.create(hours: rand(24), minutes: rand(60))
+end
+
+
+
+
+
+
