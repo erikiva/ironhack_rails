@@ -4,8 +4,11 @@ class ContactsController < ApplicationController
   end
 
   def search
-    @contacts = Contact.where("name like '?%'", contact_params )
-    render :index
+    @contacts = Contact.where('name like ?', "%#{params[:q]}%" )
+    render 'index'
+  end
+
+  def new 
   end
 
   def create

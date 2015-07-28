@@ -1,9 +1,9 @@
 <h1>My Contacts</h1>
-<form action="/contacts/search" method="post">
-	<input type="text" class="text" name="search_string" />
-	<input type="submit" >
-</form>
-
+<%= form_tag("/contacts/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
 <ul> 
   <% @contacts.each do |contact| %> 
     <li><h3><a href="/contacts/show/<%= contact.id %>"><%= contact.name %></a></h3></li> 
