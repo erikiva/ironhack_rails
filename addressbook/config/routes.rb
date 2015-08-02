@@ -1,10 +1,7 @@
 Addressbook::Application.routes.draw do
   get "/" => 'contacts#index'
-  get "contacts/create" => 'contacts#create'
-  get "contacts/destroy" => 'contacts#destroy'
-  get "contacts/show/:id" => 'contacts#show'
   get "contacts/search" => 'contacts#search'
-  get "contacts/new" => 'contacts#new'
+  resources :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

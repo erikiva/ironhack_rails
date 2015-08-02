@@ -1,4 +1,5 @@
 <h1>My friend <%= @contact.name %></h1>
+<div class="card">
 <dl>
 <dt>Address: </dt>
 <dd><%= @contact.address %></dd>
@@ -7,4 +8,5 @@
 <dt>Email: </dt>
 <dd><%= @contact.email %></dd>
 </dl>
-
+</div>
+<%= link_to "Edit", edit_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>

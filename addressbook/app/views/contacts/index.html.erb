@@ -4,8 +4,13 @@
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
-<ul> 
+<ul class="collection"> 
   <% @contacts.each do |contact| %> 
-    <li><h3><a href="/contacts/show/<%= contact.id %>"><%= contact.name %></a></h3></li> 
+    <li class="collection-item materialize-red.lighten-5">
+    <strong><%= link_to contact.name, contact_path(contact.id) %></strong>  
+    <%= link_to('Delete', contact_path(contact), method: :delete, confirm: 'Are you sure?') %>  </li>
   <% end %> 
 </ul> 
+<%= link_to("Add Contact", new_contact_path, class: "waves-effect waves-light btn") %>
+<a href="/contacts/new">Add Contact</a>
+<i class="material-icons left"></i>
