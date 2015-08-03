@@ -1,19 +1,19 @@
 <h1>My friend <%= @contact.name %></h1>
 
 <div class="card">
-<%= image_tag @contact.avatar.url(:medium) %>
-<dl>
-<dt>Address: </dt>
-<dd><%= @contact.address %></dd>
-<dt>Phone number: </dt>
-<dd><%= @contact.phone %></dd>
-<dt>Email: </dt>
-<dd><%= @contact.email %></dd>
-</dl>
+	<%= image_tag @contact.avatar.url(:medium) %>
+	<dl>
+		<dt>Address: </dt>
+		<dd><%= @contact.address %></dd>
+		<dt>Phone number: </dt>
+		<dd><%= @contact.phone %></dd>
+		<dt>Email: </dt>
+		<dd><%= @contact.email %></dd>
+	</dl>
 </div>
 <%= link_to "Edit", edit_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>
 <% if @contact.favourite %>
-<i class="fa fa-star fa-lg"></i>
+	<i class="fa fa-star fa-lg"></i>
 <% else %>
-<%= link_to "Favourite", favourite_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>
+	<%= link_to "Favourite", favourite_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>
 <% end %>

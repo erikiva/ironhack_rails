@@ -1,5 +1,6 @@
 Addressbook::Application.routes.draw do
-  get "/" => 'contacts#index'
+  root 'contacts#index'
+
   get "contacts/search" => 'contacts#search'
   get "contacts/:id/favourite" => 'contacts#favourite', as: 'favourite_contact'
   resources :contacts

@@ -9,7 +9,8 @@
     <li class="collection-item materialize-red.lighten-5">
       <% if contact.favourite %>
         <i class="fa fa-star fa-lg"></i>
-      <% end %>    <strong><%= link_to contact.name, contact_path(contact.id) %></strong>  
+      <% end %>    
+      <strong><%= link_to contact.name, contact_path(contact.id) %></strong>  
     <%= link_to('Delete', contact_path(contact), method: :delete, confirm: 'Are you sure?') %>  </li>
   <% end %> 
 </ul> 
