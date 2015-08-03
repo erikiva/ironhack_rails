@@ -36,6 +36,14 @@ class ContactsController < ApplicationController
       render 'edit'
     end
   end
+  
+  def favourite
+    @contact = Contact.find params[:id]
+    @contact.favourite = !@contact.favourite
+    @contact.save
+    render 'show'
+  end
+
   def destroy
     contact = Contact.find(params[:id])
     contact.destroy

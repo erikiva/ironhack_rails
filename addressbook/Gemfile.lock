@@ -27,6 +27,10 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     builder (3.1.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     erubis (2.7.0)
     execjs (2.5.2)
@@ -46,8 +50,15 @@ GEM
       sass (~> 3.3)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mimemagic (0.3.0)
     minitest (4.7.5)
     multi_json (1.11.2)
+    paperclip (4.3.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -113,6 +124,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   materialize-sass
+  paperclip (~> 4.3)
   pry-rails
   rails (= 4.0.0)
   sass

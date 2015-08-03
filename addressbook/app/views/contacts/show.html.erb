@@ -10,3 +10,8 @@
 </dl>
 </div>
 <%= link_to "Edit", edit_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>
+<% if @contact.favourite %>
+<i class="fa fa-star fa-lg"></i>
+<% else %>
+<%= link_to "Favourite", favourite_contact_path(@contact),  class: 'waves-effect waves-light btn'  %>
+<% end %>

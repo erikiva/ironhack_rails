@@ -1,6 +1,7 @@
 Addressbook::Application.routes.draw do
   get "/" => 'contacts#index'
   get "contacts/search" => 'contacts#search'
+  get "contacts/:id/favourite" => 'contacts#favourite', as: 'favourite_contact'
   resources :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
