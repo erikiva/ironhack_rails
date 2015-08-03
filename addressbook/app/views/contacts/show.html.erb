@@ -1,5 +1,7 @@
 <h1>My friend <%= @contact.name %></h1>
+
 <div class="card">
+<%= image_tag @contact.avatar.url(:medium) %>
 <dl>
 <dt>Address: </dt>
 <dd><%= @contact.address %></dd>
